@@ -1,3 +1,172 @@
-body{
+/* RESET */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4efe9;
+    color: #333;
+}
+
+/* HEADER */
+header {
+    background-color: #e9e5df;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+}
+
+.logoWebsite {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #444;
+}
+
+nav a:hover {
+    border-bottom: 2px solid #444;
+}
+
+/* HERO */
+.catBackground {
+    height: 320px;
+    background: url('images/4cat.jpg') center/cover no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+}
+
+.catBackground h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.catBackground p {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* CONTENT */
+.midContent {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.perkenalanAnggota h2 {
+    font-size: 28px;
+}
+
+.perkenalanAnggota span {
+    font-size: 14px;
+    color: gray;
+}
+
+.perkenalanAnggota hr {
+    width: 40px;
+    margin: 10px auto 40px;
+    border: 1px solid #555;
+}
+
+/* CARD */
+.rowCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+.card {
+    width: 230px;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.profile {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.cardContent {
+    padding: 15px;
+    text-align: center;
+}
+
+.namaLengkap {
+    font-size: 15px;
+}
+
+.npm {
+    font-size: 12px;
+    color: gray;
+}
+
+.deskirpsi {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+/* SOSMED */
+.sosmedCard img {
+    width: 20px;
+    margin: 10px 5px 0;
+}
+
+/* GITHUB FIX (NO DOUBLE BOX) */
+.githubSection {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.githubSection hr {
+    width: 40px;
+    margin: 10px auto 20px;
+}
+
+.githubBox {
+    display: inline-block;
+    background-color: #b08968;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.githubBox img {
+    width: 80px;
+}
+
+.githubBox:hover {
+    transform: translateY(-5px);
+}
+
+/* FOOTER */
+footer {
+    background-color: #5a3e2b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
 }
