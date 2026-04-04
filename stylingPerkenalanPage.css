@@ -100,7 +100,8 @@ nav a:hover {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transition: ease-in-out 0.5s;
+    transform: translateY(-10px);
 }
 
 .profile {
@@ -161,7 +162,8 @@ nav a:hover {
 }
 
 .githubBox:hover {
-    transform: translateY(-5px);
+    transition: ease-in-out 0.5s;
+    transform: translateY(-10px);
 }
 
 /* FOOTER */
@@ -171,4 +173,46 @@ footer {
     text-align: center;
     padding: 25px;
     margin-top: 50px;
+}
+
+.holographic-card {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+
+.holographic-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg, 
+    transparent, 
+    transparent 30%, 
+    rgba(255, 255, 255, 0.3)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+.holographic-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(236, 4, 4, 0.5);
+}
+
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+.my-card{
+    cursor: not-allowed;
 }
