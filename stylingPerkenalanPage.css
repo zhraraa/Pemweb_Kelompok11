@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4efe9;
@@ -23,6 +27,7 @@ header {
 .logoWebsite {
     font-weight: bold;
     font-size: 18px;
+    font-family: 'Chetta Vissto';
 }
 
 nav a {
@@ -39,6 +44,7 @@ nav a:hover {
 .catBackground {
     height: 320px;
     background: url('images/4cat.jpg') center/cover no-repeat;
+    opacity: 80%;
 
     display: flex;
     flex-direction: column;
@@ -52,6 +58,7 @@ nav a:hover {
 .catBackground h1 {
     font-size: 36px;
     font-weight: bold;
+    font-family: 'DM Serif Text';
 }
 
 .catBackground p {
@@ -69,6 +76,7 @@ nav a:hover {
 
 .perkenalanAnggota h2 {
     font-size: 28px;
+    font-family: 'DM Serif Text';
 }
 
 .perkenalanAnggota span {
@@ -103,6 +111,7 @@ nav a:hover {
     transition: ease-in-out 0.5s;
     transform: translateY(-10px);
 }
+
 
 .profile {
     width: 100%;
@@ -141,11 +150,13 @@ nav a:hover {
 .githubSection {
     text-align: center;
     margin-top: 60px;
+    font-family: 'DM Serif Text';
 }
 
 .githubSection hr {
     width: 40px;
     margin: 10px auto 20px;
+    border: 1px solid #444;
 }
 
 .githubBox {
@@ -171,8 +182,64 @@ footer {
     background-color: #5a3e2b;
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 50px;
     margin-top: 50px;
+}
+
+.rowFooter{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.oursite, .team, .contact{
+    text-align: left;
+    width: 250px;
+}
+
+.namaWeb{
+    font-size: 30px;
+    font-family: 'Chetta Vissto';
+}
+
+.judulFooter{
+    font-weight: bold;
+}
+
+.team div:nth-child(1), .contact div:nth-child(1){
+    padding-bottom: 10px;
+}
+
+.contact div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contact div:nth-child(2) a{
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.contact div:nth-child(2) a:hover{
+    transform: scale(1.01) translateX(10px);
+}
+
+.garisBawah{
+    margin: 20px 0;
+    border: 1px solid white;
+}
+
+.team div hr, .contact div hr{
+    border: 1px solid white;
+    margin-top: 3px;
+}
+
+.oursite{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .holographic-card {
@@ -213,6 +280,3 @@ footer {
   transform: rotate(-45deg) translateY(100%);
 }
 
-.my-card{
-    cursor: not-allowed;
-}
