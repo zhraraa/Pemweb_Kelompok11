@@ -115,10 +115,12 @@ nav a:hover {
 }
 
 .namaLengkap {
+    font-family: 'DM Serif Text', serif;
     font-size: 15px;
 }
 
 .npm {
+    font-family: 'Inter', sans-serif;
     font-size: 12px;
     color: gray;
 }
