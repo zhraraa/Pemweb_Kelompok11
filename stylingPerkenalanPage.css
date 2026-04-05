@@ -17,7 +17,13 @@ body {
 
 /* HEADER */
 header {
-    background-color: #e9e5df;
+    background: linear-gradient(
+        to right,
+        #f8be67,
+        #ffffff
+    );
+    backdrop-filter: blur(10px);
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -41,10 +47,11 @@ nav a:hover {
 }
 
 /* HERO */
-.catBackground {
-    height: 320px;
-    background: url('images/4cat.jpg') center/cover no-repeat;
-    opacity: 80%;
+.lobbyBackground {
+    height: 350px;
+    background: url('images/lobby.png') center/cover no-repeat;
+    
+    background-attachment: fixed; /* 🔥 parallax */
 
     display: flex;
     flex-direction: column;
@@ -279,4 +286,133 @@ footer {
   opacity: 1;
   transform: rotate(-45deg) translateY(100%);
 }
+.card:active {
+    transform: scale(0.97);
+}
+/* BACKGROUND CINEMATIC */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  inset: 0;
+  backdrop-filter: blur(15px);
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
 
+.modal.show {
+  opacity: 1;
+}
+
+/* GLASSMORPHISM BOX */
+.modal-content {
+  width: 550px;
+  max-width: 90%;
+  padding: 40px;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  box-shadow:
+    0 0 25px rgba(255, 215, 0, 0.3),
+    0 0 60px rgba(255, 215, 0, 0.2);
+
+  transform: scale(0.7) translateY(50px);
+  opacity: 0;
+
+  transition: all 0.5s cubic-bezier(.17,.67,.83,.67);
+  text-align: center;
+}
+
+/* CINEMATIC MASUK */
+.modal.show .modal-content {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+/* FOTO */
+.modal-img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 3px solid #f8be67;
+
+  box-shadow:
+    0 0 15px gold,
+    0 0 40px rgba(255,215,0,0.5);
+
+  margin-bottom: 15px;
+}
+
+/* TEXT */
+#modal-nama {
+  font-size: 24px;
+  color: #111;
+  font-weight: bold;
+}
+
+#modal-npm {
+  color: #111;
+  font-size: 14px;
+}
+
+#modal-desc {
+  color: #222;
+  margin-top: 15px;
+  line-height: 1.6;
+}
+
+/* SOSMED */
+.modal-sosmed {
+  margin-top: 25px;
+}
+
+.modal-sosmed img {
+  width: 32px;
+  margin: 0 12px;
+  transition: 0.3s;
+}
+
+/* NEON GLOW */
+.modal-sosmed img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.5);
+  box-shadow:
+    0 0 10px #fff,
+    0 0 20px gold,
+    0 0 40px gold;
+}
+
+/* CLOSE */
+.close {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close:hover {
+  color: gold;
+  transform: rotate(90deg);
+}
+.card {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.6s ease;
+}
+
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
